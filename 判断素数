@@ -1,0 +1,27 @@
+[判断素数](https://pintia.cn/problem-sets/994805046380707840/problems/994805106325700608)
+
+    import java.util.Scanner;
+
+    public class L1_028 {
+
+        public static boolean IsPrime(int n){
+            if (n <= 3) {
+                return n > 1;
+            }
+
+            for(int i=2;i<=Math.sqrt(n);i++){
+                if(n%i == 0)
+                    return false;
+            }
+            return true;
+        }
+        public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+            int n = input.nextInt();
+
+            for (int i = 0; i < n; i++) {
+                if (Is(input.nextInt())) System.out.println("Yes");
+                else System.out.println("No");
+            }
+        }
+    }
