@@ -38,14 +38,14 @@ _java_
 
 _python_
 
-        line = input().upper()
-        CountDict = {i: line.count(i) for i in ['G', 'P', 'L', 'T']}
-        while True:
-            IsPrint = False
-            for i in ['G', 'P', 'L', 'T']:
-                if CountDict[i] != 0:
-                    print(i,end='')
-                    IsPrint = True
-                    CountDict[i] -= 1
-            if not IsPrint:
-                break
+    line = input().upper()
+    CountDict = {i: line.count(i) for i in ['G', 'P', 'L', 'T']}
+    while True:
+        IsPrint = False
+        for i in ['G', 'P', 'L', 'T']:
+            if CountDict[i] != 0:
+                print(i,end='')
+                IsPrint = True
+                CountDict[i] -= 1
+        if not IsPrint:
+            break
